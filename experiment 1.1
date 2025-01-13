@@ -11,9 +11,6 @@ class Animal {
     }
 
 }
-
- 
-
 // Derived Class: Dog
 
 class Dog extends Animal {
@@ -27,9 +24,6 @@ class Dog extends Animal {
     }
 
 }
-
- 
-
 // Derived Class: Cat
 
 class Cat extends Animal {
@@ -43,8 +37,6 @@ class Cat extends Animal {
     }
 
 }
-
- 
 
 // Main Class to Demonstrate Polymorphism
 
@@ -60,21 +52,15 @@ public class PolymorphismDemo {
 
         Animal animal2 = new Cat();
 
- 
-
         // Call the overridden methods
 
         System.out.println("Animal reference holding Dog object:");
 
         animal1.makeSound(); // Output: Woof! Woof!
 
- 
-
-        System.out.println("\nAnimal reference holding Cat object:");
+         System.out.println("\nAnimal reference holding Cat object:");
 
         animal2.makeSound(); // Output: Meow! Meow!
-
- 
 
         // Demonstrating polymorphism in an array
 
