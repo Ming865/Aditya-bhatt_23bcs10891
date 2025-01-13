@@ -91,3 +91,111 @@ public class PolymorphismDemo {
     }
 
 }
+## new exepriment 1.2
+import java.util.Scanner;
+
+ 
+
+public class WrapperClassArithmeticNoTryCatch {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+ 
+
+        // Input: Two numbers as strings
+
+        System.out.print("Enter the first number: ");
+
+        String num1 = scanner.nextLine();
+
+        System.out.print("Enter the second number: ");
+
+        String num2 = scanner.nextLine();
+
+ 
+
+        // Validate inputs
+
+        if (isNumeric(num1) && isNumeric(num2)) {
+
+            // Convert the strings to Double using wrapper class
+
+            Double number1 = Double.parseDouble(num1);
+
+            Double number2 = Double.parseDouble(num2);
+
+ 
+
+            // Perform arithmetic operations
+
+            double addition = number1 + number2;
+
+            double subtraction = number1 - number2;
+
+            double multiplication = number1 * number2;
+
+            double division = number2 != 0 ? number1 / number2 : Double.NaN;
+
+ 
+
+            // Output the results
+
+            System.out.println("\nResults:");
+
+            System.out.println("Addition: " + addition);
+
+            System.out.println("Subtraction: " + subtraction);
+
+            System.out.println("Multiplication: " + multiplication);
+
+            if (number2 != 0) {
+
+                System.out.println("Division: " + division);
+
+            } else {
+
+                System.out.println("Division: Undefined (division by zero)");
+
+            }
+
+        } else {
+
+            System.out.println("Error: Please enter valid numeric strings.");
+
+        }
+
+ 
+
+        scanner.close();
+
+    }
+
+ 
+
+    // Helper method to check if a string is numeric
+
+    public static boolean isNumeric(String str) {
+
+        if (str == null || str.isEmpty()) {
+
+            return false;
+
+        }
+
+        try {
+
+            Double.parseDouble(str);
+
+            return true;
+
+        } catch (NumberFormatException e) {
+
+            return false;
+
+        }
+
+    }
+
+}
