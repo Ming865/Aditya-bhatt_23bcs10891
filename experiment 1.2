@@ -1,8 +1,10 @@
+//AIM:Write a program that takes two strings representing numbers, converts them to wrapper classes, and performs basic arithmetic operations (addition, subtraction, multiplication, division).
+
+//Code:
+
 import java.util.Scanner;
 public class WrapperClassArithmeticNoTryCatch {
-
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
 
         // Input: Two numbers as strings
@@ -14,7 +16,6 @@ public class WrapperClassArithmeticNoTryCatch {
         System.out.print("Enter the second number: ");
 
         String num2 = scanner.nextLine();
-
         // Validate inputs
 
         if (isNumeric(num1) && isNumeric(num2)) {
@@ -24,7 +25,6 @@ public class WrapperClassArithmeticNoTryCatch {
             Double number1 = Double.parseDouble(num1);
 
             Double number2 = Double.parseDouble(num2);
-
             // Perform arithmetic operations
 
             double addition = number1 + number2;
@@ -35,7 +35,8 @@ public class WrapperClassArithmeticNoTryCatch {
 
             double division = number2 != 0 ? number1 / number2 : Double.NaN;
 
-            // Output the results
+
+          // Output the results
 
             System.out.println("\nResults:");
 
@@ -60,6 +61,7 @@ public class WrapperClassArithmeticNoTryCatch {
             System.out.println("Error: Please enter valid numeric strings.");
 
         }
+
         scanner.close();
 
     }
@@ -71,6 +73,7 @@ public class WrapperClassArithmeticNoTryCatch {
         if (str == null || str.isEmpty()) {
 
             return false;
+
         }
 
         try {
@@ -88,3 +91,16 @@ public class WrapperClassArithmeticNoTryCatch {
     }
 
 }
+
+
+//OUTPUT:
+
+Results:
+Enter the first number: 23
+Enter the second number: 44
+
+Results:
+Addition: 67.0
+Subtraction: -21.0
+Multiplication: 1012.0
+Division: 0.5227272727272727
